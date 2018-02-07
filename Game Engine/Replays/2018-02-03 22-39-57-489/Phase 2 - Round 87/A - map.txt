@@ -1,0 +1,48 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Game Version : 1.0.0
+Game Level : 1
+Round Number : 87
+Map Dimensions : 10 x 10
+Phase : 2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########## Player
+~~~~~~~~~~
+~sss~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~r~~D~~
+~b~~r~~D~~
+~B~~R~~~~~
+~b~ccccc~~
+~b~~~~~~~~
+########## Opponent
+~!!!~!~!~!
+!**~!~!~!~
+~!!!~!~!~!
+!~!~!~!~!~
+~!~!!!~!~!
+!!!!*~!*!~
+!*~!*!!*~!
+!*!!*!!!!~
+!*!*****~!
+!*!!!!!!!~
+##########
+
+---------------------------
+Player Name: UnNamed Bot
+Available Energy: 189
+Shots: 72
+Hit: 16
+Points: 280
+Arsenal: [SingleShot,DoubleShot,DiagonalCrossShot,CrossShot]
+Ships: [Destroyer,Battle Ship,Cruiser]
+Status: Alive
+Shield: (Status: Deactivated, Charges: 12), Center Point: No Shield
+---------------------------
+Opponent: py3Bot
+Points: 190
+Ships: [Submarine]
+Status: Alive
+---------------------------

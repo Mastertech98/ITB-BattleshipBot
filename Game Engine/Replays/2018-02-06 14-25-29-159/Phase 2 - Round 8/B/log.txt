@@ -1,0 +1,17 @@
+
+06-02-2018 14:25:39:170 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-06 14-25-29-159\Phase 2 - Round 8\B"
+06-02-2018 14:25:39:170 - I: 	Executing process python.exe "bot.py" B "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-06 14-25-29-159\Phase 2 - Round 8\B"
+06-02-2018 14:25:39:198 - I: 	Bot has 4000ms to run before it will be forcefully killed
+06-02-2018 14:25:39:352 - E: 	Output from bot: Traceback (most recent call last):
+06-02-2018 14:25:39:352 - E: 	Output from bot:   File "bot.py", line 234, in <module>
+06-02-2018 14:25:39:352 - E: 	Output from bot:     main(args.PlayerKey)
+06-02-2018 14:25:39:352 - E: 	Output from bot:   File "bot.py", line 45, in main
+06-02-2018 14:25:39:352 - E: 	Output from bot:     greedy(state['OpponentMap']['Cells'], state['PlayerMap']['Owner']['Energy'], state['PlayerMap']['Owner']['Points'])
+06-02-2018 14:25:39:352 - E: 	Output from bot:   File "bot.py", line 67, in greedy
+06-02-2018 14:25:39:352 - E: 	Output from bot:     (x,y,direction) = read_file()
+06-02-2018 14:25:39:352 - E: 	Output from bot:   File "bot.py", line 33, in read_file
+06-02-2018 14:25:39:352 - E: 	Output from bot:     return (x, y, direction)
+06-02-2018 14:25:39:352 - E: 	Output from bot: UnboundLocalError: local variable 'x' referenced before assignment
+06-02-2018 14:25:39:362 - E: 	Output from bot: 
+06-02-2018 14:25:39:362 - I: 	Output from bot: 
+06-02-2018 14:25:39:364 - I: 	Your bots total execution time was 00:00:00.1943573

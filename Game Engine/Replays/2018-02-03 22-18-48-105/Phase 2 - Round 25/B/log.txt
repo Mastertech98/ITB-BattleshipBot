@@ -1,0 +1,7 @@
+
+03-02-2018 22:19:14:283 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-03 22-18-48-105\Phase 2 - Round 25\B"
+03-02-2018 22:19:14:283 - I: 	Executing process python.exe "bot.py" B "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-03 22-18-48-105\Phase 2 - Round 25\B"
+03-02-2018 22:19:14:309 - I: 	Bot has 4000ms to run before it will be forcefully killed
+03-02-2018 22:19:14:460 - E: 	Output from bot: 
+03-02-2018 22:19:14:460 - I: 	Output from bot: 
+03-02-2018 22:19:14:463 - I: 	Your bots total execution time was 00:00:00.1799541
