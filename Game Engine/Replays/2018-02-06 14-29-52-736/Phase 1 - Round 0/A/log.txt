@@ -1,9 +1,0 @@
-
-06-02-2018 14:29:53:896 - I: 	Executing process python.exe "" A "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-06 14-29-52-736\Phase 1 - Round 0\A"
-06-02-2018 14:29:54:517 - I: 	Bot calibration complete and can run an additional 625ms due to environment startup
-06-02-2018 14:29:54:543 - D: 	Executing bot with following commands python.exe "bot.py" A "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-06 14-29-52-736\Phase 1 - Round 0\A"
-06-02-2018 14:29:54:543 - I: 	Executing process python.exe "bot.py" A "C:\Users\user\Desktop\Strategi Algoritma\tubes1stima\Game Engine -  Version 1.2.2\Game Engine\Replays\2018-02-06 14-29-52-736\Phase 1 - Round 0\A"
-06-02-2018 14:29:54:607 - I: 	Bot has 4000ms to run before it will be forcefully killed
-06-02-2018 14:29:54:880 - I: 	Output from bot: 
-06-02-2018 14:29:54:881 - E: 	Output from bot: 
-06-02-2018 14:29:54:883 - I: 	Your bots total execution time was 00:00:00.3397459

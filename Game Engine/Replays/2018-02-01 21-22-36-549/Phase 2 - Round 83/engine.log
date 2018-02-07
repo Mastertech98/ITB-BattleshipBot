@@ -1,7 +1,0 @@
-
-01-02-2018 21:24:41:163 - I: 	Added Command FireSingleShotCommand for Player py3Bot
-01-02-2018 21:24:41:425 - I: 	Added Command FireSingleShotCommand for Player py3Bot
-01-02-2018 21:24:41:426 - D: 	Beginning round processing
-01-02-2018 21:24:41:427 - D: 	Processing Player Commands
-01-02-2018 21:24:41:428 - D: 	Killing off players who have no ships left
-01-02-2018 21:24:41:429 - D: 	Round processing complete
