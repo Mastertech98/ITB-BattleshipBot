@@ -31,8 +31,8 @@ def main(player_key):
         fire_shot(state['OpponentMap'])
 
 
-def output_shot(x, y, move=1):
-    # 1=fire shot command code
+def output_shot(x, y):
+    move = 1# 1=fire shot command code
     with open(os.path.join(output_path, command_file), 'w') as f_out:
         f_out.write('{},{},{}'.format(move, x, y))
         f_out.write('\n')
