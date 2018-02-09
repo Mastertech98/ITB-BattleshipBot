@@ -1,0 +1,15 @@
+
+09-02-2018 12:51:32:497 - I: 	Player Command DoNothingCommand failed because There was a problem during the placement of player's BotJuara ships (DoNothing), the round will be played over
+09-02-2018 12:51:32:514 - I: 	The first round has failed due to a bot's ships not all being placed
+09-02-2018 12:51:32:834 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 12-51-31-149\Phase 1 - Round 1\B"
+09-02-2018 12:51:32:834 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 12-51-31-149\Phase 1 - Round 1\B"
+09-02-2018 12:51:32:838 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 12:51:32:903 - E: 	Output from bot: Traceback (most recent call last):
+09-02-2018 12:51:32:903 - E: 	Output from bot:   File "bot.py", line 158, in <module>
+09-02-2018 12:51:32:903 - E: 	Output from bot:     main(args.PlayerKey)
+09-02-2018 12:51:32:903 - E: 	Output from bot:   File "bot.py", line 23, in main
+09-02-2018 12:51:32:903 - E: 	Output from bot:     for cell in opponent_map['Cells']:
+09-02-2018 12:51:32:903 - E: 	Output from bot: NameError: name 'opponent_map' is not defined
+09-02-2018 12:51:32:910 - E: 	Output from bot: 
+09-02-2018 12:51:32:910 - I: 	Output from bot: 
+09-02-2018 12:51:32:912 - I: 	Your bots total execution time was 00:00:00.0779643

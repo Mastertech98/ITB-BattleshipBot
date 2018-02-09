@@ -7,3 +7,12 @@ C:\Users\Rama R\Desktop\2017-Battleships-master\GameVisualizer\ReplayZ\obj\Debug
 C:\Users\Rama R\Desktop\2017-Battleships-master\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.AssemblyInfo.cs
 C:\Users\Rama R\Desktop\2017-Battleships-master\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.dll
 C:\Users\Rama R\Desktop\2017-Battleships-master\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.pdb
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\bin\Debug\netcoreapp1.1\ReplayZ.deps.json
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\bin\Debug\netcoreapp1.1\ReplayZ.runtimeconfig.json
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\bin\Debug\netcoreapp1.1\ReplayZ.runtimeconfig.dev.json
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\bin\Debug\netcoreapp1.1\ReplayZ.dll
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\bin\Debug\netcoreapp1.1\ReplayZ.pdb
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.csproj.CoreCompileInputs.cache
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.AssemblyInfo.cs
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.dll
+C:\Users\Rama R\Desktop\ITB-BattleshipBot\GameVisualizer\ReplayZ\obj\Debug\netcoreapp1.1\ReplayZ.pdb

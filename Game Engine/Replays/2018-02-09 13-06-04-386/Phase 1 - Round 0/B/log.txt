@@ -1,0 +1,13 @@
+
+09-02-2018 13:06:05:933 - I: 	Executing process python.exe "" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-06-04-386\Phase 1 - Round 0\B"
+09-02-2018 13:06:05:980 - I: 	Bot calibration complete and can run an additional 53ms due to environment startup
+09-02-2018 13:06:05:980 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-06-04-386\Phase 1 - Round 0\B"
+09-02-2018 13:06:05:980 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-06-04-386\Phase 1 - Round 0\B"
+09-02-2018 13:06:05:980 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 13:06:06:027 - E: 	Output from bot:   File "bot.py", line 50
+09-02-2018 13:06:06:027 - E: 	Output from bot:     def random:
+09-02-2018 13:06:06:027 - E: 	Output from bot:               ^
+09-02-2018 13:06:06:027 - E: 	Output from bot: SyntaxError: invalid syntax
+09-02-2018 13:06:06:027 - E: 	Output from bot: 
+09-02-2018 13:06:06:027 - I: 	Output from bot: 
+09-02-2018 13:06:06:027 - I: 	Your bots total execution time was 00:00:00.0412568

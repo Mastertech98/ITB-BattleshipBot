@@ -1,0 +1,13 @@
+
+09-02-2018 13:07:33:042 - I: 	Player Command DoNothingCommand failed because There was a problem during the placement of player's BotJuara ships (DoNothing), the round will be played over
+09-02-2018 13:07:33:042 - I: 	The first round has failed due to a bot's ships not all being placed
+09-02-2018 13:07:33:589 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-07-30-010\Phase 1 - Round 3\B"
+09-02-2018 13:07:33:589 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-07-30-010\Phase 1 - Round 3\B"
+09-02-2018 13:07:33:589 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 13:07:33:620 - E: 	Output from bot:   File "bot.py", line 50
+09-02-2018 13:07:33:620 - E: 	Output from bot:     def random:
+09-02-2018 13:07:33:620 - E: 	Output from bot:               ^
+09-02-2018 13:07:33:620 - E: 	Output from bot: SyntaxError: invalid syntax
+09-02-2018 13:07:33:635 - E: 	Output from bot: 
+09-02-2018 13:07:33:635 - I: 	Output from bot: 
+09-02-2018 13:07:33:635 - I: 	Your bots total execution time was 00:00:00.0474005

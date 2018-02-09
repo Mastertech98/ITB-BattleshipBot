@@ -10225,11 +10225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rama R\\Desktop\\2017-Battleships-master\\GameVisualizer\\ReplayZ\\ReplayZ.csproj",
+      "projectUniqueName": "C:\\Users\\Rama R\\Desktop\\ITB-BattleshipBot\\GameVisualizer\\ReplayZ\\ReplayZ.csproj",
       "projectName": "ReplayZ",
-      "projectPath": "C:\\Users\\Rama R\\Desktop\\2017-Battleships-master\\GameVisualizer\\ReplayZ\\ReplayZ.csproj",
+      "projectPath": "C:\\Users\\Rama R\\Desktop\\ITB-BattleshipBot\\GameVisualizer\\ReplayZ\\ReplayZ.csproj",
       "packagesPath": "C:\\Users\\Rama R\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rama R\\Desktop\\2017-Battleships-master\\GameVisualizer\\ReplayZ\\obj\\",
+      "outputPath": "C:\\Users\\Rama R\\Desktop\\ITB-BattleshipBot\\GameVisualizer\\ReplayZ\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rama R\\AppData\\Roaming\\NuGet\\NuGet.Config"

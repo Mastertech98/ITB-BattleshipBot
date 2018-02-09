@@ -1,0 +1,8 @@
+
+09-02-2018 13:13:20:697 - I: 	The first round has failed due to a bot's ships not all being placed
+09-02-2018 13:13:21:244 - D: 	Executing bot with following commands python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-13-18-370\Phase 1 - Round 3\A"
+09-02-2018 13:13:21:244 - I: 	Executing process python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 13-13-18-370\Phase 1 - Round 3\A"
+09-02-2018 13:13:21:260 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 13:13:21:322 - E: 	Output from bot: 
+09-02-2018 13:13:21:322 - I: 	Output from bot: 
+09-02-2018 13:13:21:322 - I: 	Your bots total execution time was 00:00:00.0762731

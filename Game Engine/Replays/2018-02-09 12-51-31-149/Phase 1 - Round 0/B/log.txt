@@ -1,0 +1,15 @@
+
+09-02-2018 12:51:32:308 - I: 	Executing process python.exe "" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 12-51-31-149\Phase 1 - Round 0\B"
+09-02-2018 12:51:32:369 - I: 	Bot calibration complete and can run an additional 64ms due to environment startup
+09-02-2018 12:51:32:378 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 12-51-31-149\Phase 1 - Round 0\B"
+09-02-2018 12:51:32:378 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 12-51-31-149\Phase 1 - Round 0\B"
+09-02-2018 12:51:32:383 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 12:51:32:466 - E: 	Output from bot: Traceback (most recent call last):
+09-02-2018 12:51:32:466 - E: 	Output from bot:   File "bot.py", line 158, in <module>
+09-02-2018 12:51:32:466 - E: 	Output from bot:     main(args.PlayerKey)
+09-02-2018 12:51:32:466 - E: 	Output from bot:   File "bot.py", line 23, in main
+09-02-2018 12:51:32:466 - E: 	Output from bot:     for cell in opponent_map['Cells']:
+09-02-2018 12:51:32:466 - E: 	Output from bot: NameError: name 'opponent_map' is not defined
+09-02-2018 12:51:32:474 - E: 	Output from bot: 
+09-02-2018 12:51:32:474 - I: 	Output from bot: 
+09-02-2018 12:51:32:474 - I: 	Your bots total execution time was 00:00:00.0973141

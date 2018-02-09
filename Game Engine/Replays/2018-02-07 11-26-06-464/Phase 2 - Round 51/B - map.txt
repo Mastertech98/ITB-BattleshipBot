@@ -1,0 +1,48 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Game Version : 1.0.0
+Game Level : 1
+Round Number : 51
+Map Dimensions : 10 x 10
+Phase : 2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########## Player
+~~~~~~~~~~
+~sss~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~r~~d~~
+~b~~r~~d~~
+~B~~R~~~~~
+~b~CCccC~~
+~B~~~~~~~~
+########## Opponent
+~~~~~!~!!!
+!*~*!~!~!!
+~!~!!!!~~!
+!!~!!!~!!~
+!~~~!!~!!~
+~!!~~~~~~!
+!*~~~!!*!~
+!*~~*~!~~!
+~*!~**~~~~
+!~~~~~!~!~
+##########
+
+---------------------------
+Player Name: py3Bot
+Available Energy: 103
+Shots: 50
+Hit: 9
+Points: 90
+Arsenal: [SingleShot,DiagonalCrossShot,CornerShot,CrossShot]
+Ships: [Battle Ship,Carrier,Cruiser]
+Status: Alive
+Shield: (Status: Deactivated, Charges: 7), Center Point: No Shield
+---------------------------
+Opponent: BotJuara
+Points: 170
+Ships: [Submarine,Destroyer,Battle Ship,Carrier,Cruiser]
+Status: Alive
+---------------------------

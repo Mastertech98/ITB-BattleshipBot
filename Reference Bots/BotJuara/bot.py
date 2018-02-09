@@ -13,21 +13,21 @@ targets = []
 
 def main(player_key):
     global map_size
+    global targets
     # Retrieve current game state
     with open(os.path.join(output_path, game_state_file), 'r') as f_in:
         state = json.load(f_in)
     map_size = state['MapDimension']
-    # Get all available cells to shoot
-    global targets
-    targets = []
-    for cell in opponent_map['Cells']:
-        if not cell['Damaged'] and not cell['Missed']:
-            valid_cell = cell['X'], cell['Y']
-            targets.append(valid_cell)
             
     if state['Phase'] == 1:
         place_ships()
     else:
+        # Get all available cells to shoot
+        targets = []
+        for cell in state['OpponentMap']['Cells']:
+            if not cell['Damaged'] and not cell['Missed']:
+                valid_cell = cell['X'], cell['Y']
+                targets.append(valid_cell)
         fire_shot(state['OpponentMap'])
 
 
@@ -47,7 +47,7 @@ def fire_shot(opponent_map):
     output_shot(*target)
     return
     
-def random(opponent_map):
+def random:
     target = choice(targets)
     return target
     
@@ -62,6 +62,8 @@ def pilih(opponent_map):
     next_to_missed_cell = get_cell_next_to_missed(opponent_map)
     if next_to_missed_cell != None:
         return next_to_missed_cell
+
+    return random()
         
 def get_cell_next_to_damaged(opponent_map):
     damaged_cell = None
