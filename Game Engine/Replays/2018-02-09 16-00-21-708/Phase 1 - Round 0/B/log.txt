@@ -1,0 +1,9 @@
+
+09-02-2018 16:00:22:693 - I: 	Executing process python.exe "" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 16-00-21-708\Phase 1 - Round 0\B"
+09-02-2018 16:00:22:755 - I: 	Bot calibration complete and can run an additional 62ms due to environment startup
+09-02-2018 16:00:22:755 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 16-00-21-708\Phase 1 - Round 0\B"
+09-02-2018 16:00:22:755 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-09 16-00-21-708\Phase 1 - Round 0\B"
+09-02-2018 16:00:22:771 - I: 	Bot has 4000ms to run before it will be forcefully killed
+09-02-2018 16:00:22:833 - I: 	Output from bot: 
+09-02-2018 16:00:22:833 - E: 	Output from bot: 
+09-02-2018 16:00:22:833 - I: 	Your bots total execution time was 00:00:00.0731204

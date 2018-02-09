@@ -1,1 +1,1 @@
-Battleships.exe -b "..\Reference Bots\Python3" "..\Reference Bots\BotJuara" --clog --pretty
+Battleships.exe -b "..\Reference Bots\Python3" "..\Reference Bots\BotJuara" --clog --pretty --debug

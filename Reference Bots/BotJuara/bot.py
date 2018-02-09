@@ -47,7 +47,7 @@ def fire_shot(opponent_map):
     output_shot(*target)
     return
     
-def random:
+def random():
     target = choice(targets)
     return target
     
@@ -71,20 +71,18 @@ def get_cell_next_to_damaged(opponent_map):
     for cell in opponent_map['Cells']:
         if cell['Damaged']:
             damaged_cell = (cell['X'], cell['Y'])
-            break
+            if (damaged_cell[0] + 1, damaged_cell[1]) in targets:
+                return (damaged_cell[0] + 1, damaged_cell[1])
+            elif (damaged_cell[0], damaged_cell[1] + 1) in targets:
+                return (damaged_cell[0], damaged_cell[1] + 1)
+            elif (damaged_cell[0] - 1, damaged_cell[1]) in targets:
+                return (damaged_cell[0] - 1, damaged_cell[1])
+            elif (damaged_cell[0], damaged_cell[1] - 1) in targets:
+                return (damaged_cell[0], damaged_cell[1] - 1)
+
+    return None
     
-    if damaged_cell == None:
-        return None
-    elif is_available((damaged_cell[0] + 1, damaged_cell[1])):
-        return (damaged_cell[0] + 1, damaged_cell[1])
-    elif is_available((damaged_cell[0], damaged_cell[1] + 1)):
-        return (damaged_cell[0], damaged_cell[1] + 1)
-    elif is_available((damaged_cell[0] - 1, damaged_cell[1])):
-        return (damaged_cell[0] - 1, damaged_cell[1])
-    elif is_available((damaged_cell[0], damaged_cell[1] - 1)):
-        return (damaged_cell[0], damaged_cell[1] - 1)
-    else: 
-        return None
+    
         
 def get_cell_next_to_missed(opponent_map):
     missed_cell = None
@@ -92,28 +90,16 @@ def get_cell_next_to_missed(opponent_map):
     for cell in opponent_map['Cells']:
         if cell['Missed']:
             missed_cell = (cell['X'], cell['Y'])
-            break
+            if (missed_cell[0] + 1, missed_cell[1] + 1) in targets:
+                return (missed_cell[0] + 1, missed_cell[1] + 1)
+            elif (missed_cell[0] - 1, missed_cell[1] + 1) in targets:
+                return (missed_cell[0] - 1, missed_cell[1] + 1)
+            elif (missed_cell[0] + 1, missed_cell[1] - 1) in targets:
+                return (missed_cell[0] + 1, missed_cell[1] - 1)
+            elif (missed_cell[0] - 1, missed_cell[1] - 1) in targets:
+                return (missed_cell[0] - 1, missed_cell[1] - 1)
     
-    if missed_cell == None:
-        return None
-    elif is_available((missed_cell[0] + 1, missed_cell[1] + 1)):
-        return (missed_cell[0] + 1, missed_cell[1] + 1)
-    elif is_available((missed_cell[0] - 1, missed_cell[1] + 1)):
-        return (missed_cell[0] - 1, missed_cell[1] + 1)
-    elif is_available((missed_cell[0] + 1, missed_cell[1] - 1)):
-        return (missed_cell[0] + 1, missed_cell[1] - 1)
-    elif is_available((missed_cell[0] - 1, missed_cell[1] - 1)):
-        return (missed_cell[0] - 1, missed_cell[1] - 1)
-    else: 
-        return False
-    
-def is_available(cell):
-    i = 0
-    found = False
-    while i < len(targets) and not found:
-        if target[i] == cell:
-            found = True
-    return found
+    return None
             
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
