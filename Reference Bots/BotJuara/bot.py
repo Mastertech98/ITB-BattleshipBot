@@ -43,7 +43,7 @@ def fire_shot(opponent_map):
     # To send through a command please pass through the following <code>,<x>,<y>
     # Possible codes: 1 - Fireshot, 0 - Do Nothing (please pass through coordinates if
     #  code 1 is your choice)
-    target = pilih(opponent_map)
+    target = cross_alg(opponent_map)
     output_shot(*target)
     return
     
@@ -54,7 +54,7 @@ def random():
 def is_valid_cell(x, y):
     return x < map_size and y < map_size
 
-def pilih(opponent_map):
+def cross_alg(opponent_map):
     next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
     if next_to_damaged_cell != None:
         return next_to_damaged_cell
@@ -88,7 +88,7 @@ def get_cell_next_to_missed(opponent_map):
     missed_cell = None
     
     for cell in opponent_map['Cells']:
-        if cell['Missed']:
+        if cell['Missed'] and is_missed_cell_valid(cell):
             missed_cell = (cell['X'], cell['Y'])
             if (missed_cell[0] + 1, missed_cell[1] + 1) in targets:
                 return (missed_cell[0] + 1, missed_cell[1] + 1)
@@ -100,6 +100,9 @@ def get_cell_next_to_missed(opponent_map):
                 return (missed_cell[0] - 1, missed_cell[1] - 1)
     
     return None
+    
+def is_missed_cell_valid(cell):
+    return (missed_cell[0] + 1, missed_cell[1]) in targets and (missed_cell[0] - 1, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + 1) in targets and (missed_cell[0], missed_cell[1] - 1) in targets 
             
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
