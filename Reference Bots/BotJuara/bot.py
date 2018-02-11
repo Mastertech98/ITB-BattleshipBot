@@ -55,15 +55,21 @@ def is_valid_cell(x, y):
     return x < map_size and y < map_size
 
 def cross_alg(opponent_map):
+    n = 5
+    
     next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
     if next_to_damaged_cell != None:
         return next_to_damaged_cell
         
-    next_to_missed_cell = get_cell_next_to_missed(opponent_map)
-    if next_to_missed_cell != None:
-        return next_to_missed_cell
+    while n > 1:
+        next_to_missed_cell = get_cell_next_to_missed(opponent_map, n)
+        if next_to_missed_cell == None:
+            n -= 1
+        else:
+            return next_to_missed_cell
 
     return random()
+
         
 def get_cell_next_to_damaged(opponent_map):
     damaged_cell = None
@@ -81,28 +87,29 @@ def get_cell_next_to_damaged(opponent_map):
                 return (damaged_cell[0], damaged_cell[1] - 1)
 
     return None
-    
-    
         
-def get_cell_next_to_missed(opponent_map):
+def get_cell_next_to_missed(opponent_map, delta):
     missed_cell = None
     
     for cell in opponent_map['Cells']:
-        if cell['Missed'] and is_missed_cell_valid(cell):
+        if cell['Missed'] and is_missed_cell_valid((cell['X'], cell['Y']), delta):
             missed_cell = (cell['X'], cell['Y'])
-            if (missed_cell[0] + 1, missed_cell[1] + 1) in targets:
-                return (missed_cell[0] + 1, missed_cell[1] + 1)
-            elif (missed_cell[0] - 1, missed_cell[1] + 1) in targets:
+            if (missed_cell[0] + delta, missed_cell[1] + delta) in targets:
+                return (missed_cell[0] + delta, missed_cell[1] + delta)
+            elif (missed_cell[0] - delta, missed_cell[1] + delta) in targets:
                 return (missed_cell[0] - 1, missed_cell[1] + 1)
-            elif (missed_cell[0] + 1, missed_cell[1] - 1) in targets:
-                return (missed_cell[0] + 1, missed_cell[1] - 1)
-            elif (missed_cell[0] - 1, missed_cell[1] - 1) in targets:
-                return (missed_cell[0] - 1, missed_cell[1] - 1)
+            elif (missed_cell[0] + delta, missed_cell[1] - delta) in targets:
+                return (missed_cell[0] + delta, missed_cell[1] - delta)
+            elif (missed_cell[0] - delta, missed_cell[1] - delta) in targets:
+                return (missed_cell[0] - delta, missed_cell[1] - delta)
     
     return None
     
-def is_missed_cell_valid(cell):
-    return (missed_cell[0] + 1, missed_cell[1]) in targets and (missed_cell[0] - 1, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + 1) in targets and (missed_cell[0], missed_cell[1] - 1) in targets 
+def is_missed_cell_valid(missed_cell, n):
+    if n == 0:
+        return True
+    else:
+        return (missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1)
             
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
