@@ -97,7 +97,7 @@ def get_cell_next_to_missed(opponent_map, delta):
             if (missed_cell[0] + delta, missed_cell[1] + delta) in targets:
                 return (missed_cell[0] + delta, missed_cell[1] + delta)
             elif (missed_cell[0] - delta, missed_cell[1] + delta) in targets:
-                return (missed_cell[0] - 1, missed_cell[1] + 1)
+                return (missed_cell[0] - delta, missed_cell[1] + delta)
             elif (missed_cell[0] + delta, missed_cell[1] - delta) in targets:
                 return (missed_cell[0] + delta, missed_cell[1] - delta)
             elif (missed_cell[0] - delta, missed_cell[1] - delta) in targets:
