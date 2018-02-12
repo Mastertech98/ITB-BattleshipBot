@@ -59,9 +59,9 @@ def is_valid_cell(x, y):
 def cross_alg(opponent_map):
     n = 2
 
-    # next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
-    # if next_to_damaged_cell != None:
-    #     return next_to_damaged_cell
+    next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
+    if next_to_damaged_cell != None:
+        return next_to_damaged_cell
 
     while n > 1:
         next_to_missed_cell = get_cell_next_to_missed(opponent_map, n)
@@ -150,37 +150,6 @@ def identify_ship_damaged(opponent_map, damaged_cell, direction):
             return None
         elif is_available_cell(current_cell):
             return current_cell
-
-
-# def identify_ship_damaged(opponent_map, damaged_cell, direction):
-#     if (direction == 1):
-#         if is_damaged_cell(opponent_map, damaged_cell):
-#             return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
-#         elif is_missed_cell(opponent_map, damaged_cell):
-#             return None
-#         elif is_available_cell(damaged_cell):
-#             return damaged_cell
-#     elif (direction == 2):
-#         if is_damaged_cell(opponent_map, damaged_cell):
-#             return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
-#         elif is_missed_cell(opponent_map, damaged_cell):
-#             return None
-#         elif is_available_cell(damaged_cell):
-#             return damaged_cell
-#     elif (direction == 3):
-#         if is_damaged_cell(opponent_map, damaged_cell):
-#             return identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 3)
-#         elif is_missed_cell(opponent_map, damaged_cell):
-#             return None
-#         elif is_available_cell(damaged_cell):
-#             return damaged_cell
-#     elif (direction == 4):
-#         if is_damaged_cell(opponent_map, damaged_cell):
-#             return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 4)
-#         elif is_missed_cell(opponent_map, damaged_cell):
-#             return None
-#         elif is_available_cell(damaged_cell):
-#             return damaged_cell
 ###
 
 def get_cell_next_to_damaged(opponent_map):
