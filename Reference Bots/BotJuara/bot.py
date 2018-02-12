@@ -44,6 +44,8 @@ def fire_shot(opponent_map):
     # Possible codes: 1 - Fireshot, 0 - Do Nothing (please pass through coordinates if
     #  code 1 is your choice)
     target = cross_alg(opponent_map)
+    while not(is_available_cell(target)):
+        target = cross_alg(opponent_map)
     output_shot(*target)
     return
 
@@ -57,9 +59,9 @@ def is_valid_cell(x, y):
 def cross_alg(opponent_map):
     n = 2
 
-    next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
-    if next_to_damaged_cell != None:
-        return next_to_damaged_cell
+    # next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
+    # if next_to_damaged_cell != None:
+    #     return next_to_damaged_cell
 
     while n > 1:
         next_to_missed_cell = get_cell_next_to_missed(opponent_map, n)
@@ -99,6 +101,8 @@ def is_available_cell(cell):
 
 ### 1: North, 2: South, 3: East, 4: West
 def identify_cell_damaged(opponent_map, damaged_cell):
+    target_cell = None
+
     # North & South
     if is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] + 1)) or is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] - 1)):
         target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
@@ -108,11 +112,11 @@ def identify_cell_damaged(opponent_map, damaged_cell):
             return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
     #East & West
     elif is_damaged_cell(opponent_map, (damaged_cell[0] + 1, damaged_cell[1])) or is_damaged_cell(opponent_map, (damaged_cell[0] - 1, damaged_cell[1])):
-        target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 3)
+        target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 3)
         if (target_cell != None):
             return target_cell
         else:
-            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 4)
+            return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 4)
     else:
         return False
 
@@ -183,6 +187,7 @@ def get_cell_next_to_damaged(opponent_map):
     damaged_cell = None
 
     for cell in opponent_map['Cells']:
+        target_cell = None 
         if cell['Damaged']:
             damaged_cell = (cell['X'], cell['Y'])
             target_cell = identify_cell_damaged(opponent_map, damaged_cell)
