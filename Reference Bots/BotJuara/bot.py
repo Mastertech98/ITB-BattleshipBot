@@ -178,50 +178,38 @@ def get_cell_next_to_missed(opponent_map, delta):
     missed_cell = None
 
     for cell in opponent_map['Cells']:
-        if cell['Missed'] and is_missed_cell_valid((cell['X'], cell['Y']), delta):
-            missed_cell = (cell['X'], cell['Y'])
-            if (missed_cell[0] + delta, missed_cell[1] + delta) in targets:
-                return (missed_cell[0] + delta, missed_cell[1] + delta)
-            elif (missed_cell[0] - delta, missed_cell[1] + delta) in targets:
-                return (missed_cell[0] - 1, missed_cell[1] + 1)
-            elif (missed_cell[0] + delta, missed_cell[1] - delta) in targets:
-                return (missed_cell[0] + delta, missed_cell[1] - delta)
-            elif (missed_cell[0] - delta, missed_cell[1] - delta) in targets:
-                return (missed_cell[0] - delta, missed_cell[1] - delta)
+        if cell['Missed']:
+            temp_cell = is_missed_cell_valid((cell['X'], cell['Y']), delta)
+            if  temp_cell != False:
+                return temp_cell
 
     return None
 
 def is_missed_cell_valid(missed_cell, n):
     i = n
     while (i > 1):
-        if (((missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets) == False):
-            return False
+        if (missed_cell[0] + n, missed_cell[1]) in targets:
+            return (missed_cell[0] + n, missed_cell[1])
+        elif (missed_cell[0] - n, missed_cell[1]) in targets:
+            return (missed_cell[0] - n, missed_cell[1])
+        elif (missed_cell[0], missed_cell[1] + n) in targets:
+            return (missed_cell[0], missed_cell[1] + n)
+        elif (missed_cell[0], missed_cell[1] - n) in targets:
+            return (missed_cell[0], missed_cell[1] - n)
         else:
             i -= 1
-    return True
+        #     return False
+        # # if (((missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets) == False):
+        # #     return False
+        # # else:
+        # #     i -= 1
+    return False
 
 # def is_missed_cell_valid(missed_cell, n):
 #     if n == 0:
 #         return True
 #     else:
 #         return (missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1)
-
-
-def get_damaged_and_missed_cell(opponent_map):
-    # Get damaged cell which has the surrounding
-    damaged = False
-    missed = False
-    damaged_cell = None
-    missed_cell = None
-    for cell in opponent_map['Cells']:
-        if cell['Damaged'] and not damaged:
-            damaged_cell = (cell['X'], cell['Y'])
-            damaged = True
-        if cell['Missed'] and not missed:
-            missed_cell = (cell['X'], cell['Y'])
-            missed = True
-        if damaged and missed:
-            break
 
 def place_ships():
     # Please place your ships in the following format <Shipname> <x> <y> <direction>
