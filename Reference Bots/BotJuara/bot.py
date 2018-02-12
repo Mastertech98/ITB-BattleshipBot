@@ -79,14 +79,16 @@ def get_cell(opponent_map, cell_coor):
 
 def is_damaged_cell(opponent_map, cell):
     if is_valid_cell(cell[0], cell[1]):
-        if get_cell(opponent_map, cell)['Damaged']:
-            return True
+        cell_id = get_cell(opponent_map, cell)
+        if cell_id != False:
+            return cell_id['Damaged']
     return False
 
 def is_missed_cell(opponent_map, cell):
     if is_valid_cell(cell[0], cell[1]):
-        if get_cell(opponent_map, cell)['Missed']:
-            return True
+        cell_id = get_cell(opponent_map, cell)
+        if cell_id != False:
+            return cell_id['Missed']
     return False
 
 def is_available_cell(cell):
