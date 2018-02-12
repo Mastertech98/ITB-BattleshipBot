@@ -111,14 +111,14 @@ def is_missed_cell_valid(missed_cell, n, direction = None):
     else:
         if direction == None:
             return (is_missed_cell_valid(missed_cell, n, 'e') or is_missed_cell_valid(missed_cell, n, 'w') or is_missed_cell_valid(missed_cell,n,  'n') or is_missed_cell_valid(missed_cell, n, 's'))
-        elif direction == 'n':
-            return (missed_cell[0], missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'n')
-        elif direction == 's':
-            return (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 's')
-        elif direction == 'e':
-            return (missed_cell[0] + n, missed_cell[1]) in targets and is_missed_cell_valid(missed_cell, n - 1, 'e')
-        elif direction == 'w':
-            return (missed_cell[0] - n, missed_cell[1]) in targets and is_missed_cell_valid(missed_cell, n - 1, 'w')
+        elif direction == 'ne':
+            return (missed_cell[0] + n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'ne')
+        elif direction == 'se':
+            return (missed_cell[0] + n, missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'se')
+        elif direction == 'sw':
+            return (missed_cell[0] - n, missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'sw')
+        elif direction == 'nw':
+            return (missed_cell[0] - n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'nw')
 
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
