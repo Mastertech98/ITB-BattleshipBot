@@ -1,8 +1,9 @@
 {
-  "Author" : "Henry",
+
+  "Author" : "Jon",
   "Email" : "henry.harya@gmail.com",
   "NickName" : "py3Bot",
-  "BotType" : "Python3",
+  "BotType" : "BotFaza",
   "ProjectLocation" : "",
   "RunFile" : "bot.py"
 }

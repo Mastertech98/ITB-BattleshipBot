@@ -105,12 +105,21 @@ def get_cell_next_to_missed(opponent_map, delta):
     
     return None
     
-def is_missed_cell_valid(missed_cell, n):
+def is_missed_cell_valid(missed_cell, n, direction = None):
     if n == 0:
         return True
     else:
-        return (missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1)
-            
+        if direction == None:
+            return (is_missed_cell_valid(missed_cell, n, 'ne') or is_missed_cell_valid(missed_cell, n, 'se') or is_missed_cell_valid(missed_cell,n,  'nw') or is_missed_cell_valid(missed_cell, n, 'sw'))
+        elif direction == 'ne':
+            return (missed_cell[0] + n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'ne')
+        elif direction == 'se':
+            return (missed_cell[0] + n, missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'se')
+        elif direction == 'sw':
+            return (missed_cell[0] - n, missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'sw')
+        elif direction == 'nw':
+            return (missed_cell[0] - n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'nw')
+
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
     damaged = False
