@@ -75,6 +75,7 @@ def get_cell(opponent_map, cell_coor):
     for cell in opponent_map['Cells']:
         if (cell['X'] == cell_coor[0]) and (cell['Y'] == cell_coor[1]):
             return cell
+    return False
 
 def is_damaged_cell(opponent_map, cell):
     if is_valid_cell(cell[0], cell[1]):
@@ -94,6 +95,7 @@ def is_available_cell(cell):
             return True
     return False
 
+### 1: North, 2: South, 3: East, 4: West
 def identify_cell_damaged(opponent_map, damaged_cell):
     # North & South
     if is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] + 1)) or is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] - 1)):
@@ -113,34 +115,66 @@ def identify_cell_damaged(opponent_map, damaged_cell):
         return False
 
 def identify_ship_damaged(opponent_map, damaged_cell, direction):
+    current_cell = damaged_cell
     if (direction == 1):
-        if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
-        elif is_missed_cell(opponent_map, damaged_cell):
+        while(is_damaged_cell(opponent_map, current_cell)):
+            current_cell = (current_cell[0], current_cell[1] + 1)
+        if is_missed_cell(opponent_map, current_cell):
             return None
-        elif is_available_cell(damaged_cell):
-            return damaged_cell
+        elif is_available_cell(current_cell):
+            return current_cell
     elif (direction == 2):
-        if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
-        elif is_missed_cell(opponent_map, damaged_cell):
+        while(is_damaged_cell(opponent_map, current_cell)):
+            current_cell = (current_cell[0], current_cell[1] - 1)
+        if is_missed_cell(opponent_map, current_cell):
             return None
-        elif is_available_cell(damaged_cell):
-            return damaged_cell
+        elif is_available_cell(current_cell):
+            return current_cell
     elif (direction == 3):
-        if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 3)
-        elif is_missed_cell(opponent_map, damaged_cell):
+        while(is_damaged_cell(opponent_map, current_cell)):
+            current_cell = (current_cell[0] + 1, current_cell[1])
+        if is_missed_cell(opponent_map, current_cell):
             return None
-        elif is_available_cell(damaged_cell):
-            return damaged_cell
+        elif is_available_cell(current_cell):
+            return current_cell
     elif (direction == 4):
-        if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 4)
-        elif is_missed_cell(opponent_map, damaged_cell):
+        while(is_damaged_cell(opponent_map, current_cell)):
+            current_cell = (current_cell[0] - 1, current_cell[1])
+        if is_missed_cell(opponent_map, current_cell):
             return None
-        elif is_available_cell(damaged_cell):
-            return damaged_cell
+        elif is_available_cell(current_cell):
+            return current_cell
+
+
+# def identify_ship_damaged(opponent_map, damaged_cell, direction):
+#     if (direction == 1):
+#         if is_damaged_cell(opponent_map, damaged_cell):
+#             return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
+#         elif is_missed_cell(opponent_map, damaged_cell):
+#             return None
+#         elif is_available_cell(damaged_cell):
+#             return damaged_cell
+#     elif (direction == 2):
+#         if is_damaged_cell(opponent_map, damaged_cell):
+#             return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
+#         elif is_missed_cell(opponent_map, damaged_cell):
+#             return None
+#         elif is_available_cell(damaged_cell):
+#             return damaged_cell
+#     elif (direction == 3):
+#         if is_damaged_cell(opponent_map, damaged_cell):
+#             return identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 3)
+#         elif is_missed_cell(opponent_map, damaged_cell):
+#             return None
+#         elif is_available_cell(damaged_cell):
+#             return damaged_cell
+#     elif (direction == 4):
+#         if is_damaged_cell(opponent_map, damaged_cell):
+#             return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 4)
+#         elif is_missed_cell(opponent_map, damaged_cell):
+#             return None
+#         elif is_available_cell(damaged_cell):
+#             return damaged_cell
 ###
 
 def get_cell_next_to_damaged(opponent_map):
@@ -149,7 +183,7 @@ def get_cell_next_to_damaged(opponent_map):
     for cell in opponent_map['Cells']:
         if cell['Damaged']:
             damaged_cell = (cell['X'], cell['Y'])
-            target_cell = identify_ship_damaged(opponent_map, damaged_cell)
+            target_cell = identify_cell_damaged(opponent_map, damaged_cell)
             if (target_cell == False):
                 if (damaged_cell[0] + 1, damaged_cell[1]) in targets:
                     return (damaged_cell[0] + 1, damaged_cell[1])
@@ -182,10 +216,20 @@ def get_cell_next_to_missed(opponent_map, delta):
     return None
 
 def is_missed_cell_valid(missed_cell, n):
-    if n == 0:
-        return True
-    else:
-        return (missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1)
+    i = n
+    while (i > 1):
+        if (((missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets) == False):
+            return False
+        else:
+            i -= 1
+    return True
+
+# def is_missed_cell_valid(missed_cell, n):
+#     if n == 0:
+#         return True
+#     else:
+#         return (missed_cell[0] + n, missed_cell[1]) in targets and (missed_cell[0] - n, missed_cell[1]) in targets and (missed_cell[0], missed_cell[1] + n) in targets and (missed_cell[0], missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1)
+
 
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
