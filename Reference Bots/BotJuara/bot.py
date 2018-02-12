@@ -110,7 +110,7 @@ def is_missed_cell_valid(missed_cell, n, direction = None):
         return True
     else:
         if direction == None:
-            return (is_missed_cell_valid(missed_cell, n, 'e') or is_missed_cell_valid(missed_cell, n, 'w') or is_missed_cell_valid(missed_cell,n,  'n') or is_missed_cell_valid(missed_cell, n, 's'))
+            return (is_missed_cell_valid(missed_cell, n, 'ne') or is_missed_cell_valid(missed_cell, n, 'se') or is_missed_cell_valid(missed_cell,n,  'nw') or is_missed_cell_valid(missed_cell, n, 'sw'))
         elif direction == 'ne':
             return (missed_cell[0] + n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'ne')
         elif direction == 'se':
