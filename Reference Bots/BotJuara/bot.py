@@ -78,62 +78,65 @@ def get_cell(opponent_map, cell_coor):
 
 def is_damaged_cell(opponent_map, cell):
     if is_valid_cell(cell[0], cell[1]):
-        return get_cell(opponent_map, cell)['Damaged']
+        if get_cell(opponent_map, cell)['Damaged']:
+            return True
     return False
 
-def is_missed_cell(cell):
+def is_missed_cell(opponent_map, cell):
     if is_valid_cell(cell[0], cell[1]):
-        return opponent_map['Cells'][cell]['Missed']
+        if get_cell(opponent_map, cell)['Missed']:
+            return True
     return False
 
-def is_available_cell(opponent_map, cell):
+def is_available_cell(cell):
     if is_valid_cell(cell[0], cell[1]):
         if (cell[0], cell[1]) in targets:
             return True
     return False
 
-def identify_ship_damaged(opponent_map, damaged_cell, direction = None):
-    if (direction == None):
-        # North & South
-        if is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] + 1)) or is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] - 1)):
-            target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 'n')
-            if (target_cell != None):
-                return target_cell
-            else:
-                return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 's')
-        #East & West
-        elif is_damaged_cell(opponent_map, (damaged_cell[0] + 1, damaged_cell[1])) or is_damaged_cell(opponent_map, (damaged_cell[0] - 1, damaged_cell[1])):
-            target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 'e')
-            if (target_cell != None):
-                return target_cell
-            else:
-                return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 'w')
+def identify_cell_damaged(opponent_map, damaged_cell):
+    # North & South
+    if is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] + 1)) or is_damaged_cell(opponent_map, (damaged_cell[0], damaged_cell[1] - 1)):
+        target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
+        if (target_cell != None):
+            return target_cell
         else:
-            return False
-    elif (direction == 'n'):
+            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
+    #East & West
+    elif is_damaged_cell(opponent_map, (damaged_cell[0] + 1, damaged_cell[1])) or is_damaged_cell(opponent_map, (damaged_cell[0] - 1, damaged_cell[1])):
+        target_cell = identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 3)
+        if (target_cell != None):
+            return target_cell
+        else:
+            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 4)
+    else:
+        return False
+
+def identify_ship_damaged(opponent_map, damaged_cell, direction):
+    if (direction == 1):
         if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 'n')
+            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] + 1), 1)
         elif is_missed_cell(opponent_map, damaged_cell):
             return None
         elif is_available_cell(damaged_cell):
             return damaged_cell
-    elif (direction == 's'):
+    elif (direction == 2):
         if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 's')
+            return identify_ship_damaged(opponent_map, (damaged_cell[0], damaged_cell[1] - 1), 2)
         elif is_missed_cell(opponent_map, damaged_cell):
             return None
         elif is_available_cell(damaged_cell):
             return damaged_cell
-    elif (direction == 'e'):
+    elif (direction == 3):
         if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 'e')
+            return identify_ship_damaged(opponent_map, (damaged_cell[0] + 1, damaged_cell[1]), 3)
         elif is_missed_cell(opponent_map, damaged_cell):
             return None
         elif is_available_cell(damaged_cell):
             return damaged_cell
-    elif (direction == 'w'):
+    elif (direction == 4):
         if is_damaged_cell(opponent_map, damaged_cell):
-            return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 'w')
+            return identify_ship_damaged(opponent_map, (damaged_cell[0] - 1, damaged_cell[1]), 4)
         elif is_missed_cell(opponent_map, damaged_cell):
             return None
         elif is_available_cell(damaged_cell):
