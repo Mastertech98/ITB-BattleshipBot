@@ -55,7 +55,7 @@ def is_valid_cell(x, y):
     return x < map_size and y < map_size
 
 def cross_alg(opponent_map):
-    n = 5
+    n = 2
     
     next_to_damaged_cell = get_cell_next_to_damaged(opponent_map)
     if next_to_damaged_cell != None:
@@ -97,7 +97,7 @@ def get_cell_next_to_missed(opponent_map, delta):
             if (missed_cell[0] + delta, missed_cell[1] + delta) in targets:
                 return (missed_cell[0] + delta, missed_cell[1] + delta)
             elif (missed_cell[0] - delta, missed_cell[1] + delta) in targets:
-                return (missed_cell[0] - 1, missed_cell[1] + 1)
+                return (missed_cell[0] - delta, missed_cell[1] + delta)
             elif (missed_cell[0] + delta, missed_cell[1] - delta) in targets:
                 return (missed_cell[0] + delta, missed_cell[1] - delta)
             elif (missed_cell[0] - delta, missed_cell[1] - delta) in targets:
