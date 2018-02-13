@@ -1,0 +1,12 @@
+
+13-02-2018 08:06:01:888 - I: 	Loaded bot ..\Reference Bots\Python3
+13-02-2018 08:06:01:904 - I: 	Loaded bot ..\Reference Bots\BotJuara
+13-02-2018 08:06:01:904 - I: 	Registered player py3Bot
+13-02-2018 08:06:01:904 - I: 	Registered player BotJuara
+13-02-2018 08:06:01:935 - I: 		OK!
+13-02-2018 08:06:03:295 - I: 	Added Command PlaceShipCommand for Player py3Bot
+13-02-2018 08:06:03:435 - I: 	Added Command PlaceShipCommand for Player BotJuara
+13-02-2018 08:06:03:435 - D: 	Beginning round processing
+13-02-2018 08:06:03:451 - D: 	Processing Player Commands
+13-02-2018 08:06:03:451 - D: 	Killing off players who have no ships left
+13-02-2018 08:06:03:451 - D: 	Round processing complete

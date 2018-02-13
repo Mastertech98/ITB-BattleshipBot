@@ -1,7 +1,7 @@
 import argparse
 import json
 import os
-from random import choice
+from random import choice, shuffle
 
 command_file = "command.txt"
 place_ship_file = "place.txt"
@@ -63,7 +63,7 @@ def cross_alg(opponent_map):
     if next_to_damaged_cell != None:
         return next_to_damaged_cell
 
-    while n > 1:
+    while n >= 1:
         next_to_missed_cell = get_cell_next_to_missed(opponent_map, n)
         if next_to_missed_cell == None:
             n -= 1
@@ -177,6 +177,7 @@ def get_cell_next_to_damaged(opponent_map):
 def get_cell_next_to_missed(opponent_map, delta):
     missed_cell = None
 
+    shuffle(opponent_map['Cells'])
     for cell in opponent_map['Cells']:
         if cell['Missed'] and is_missed_cell_valid((cell['X'], cell['Y']), delta):
             missed_cell = (cell['X'], cell['Y'])
