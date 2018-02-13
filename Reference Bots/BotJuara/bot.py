@@ -9,11 +9,18 @@ game_state_file = "state.json"
 output_path = '.'
 map_size = 0
 targets = []
+state = None
+ships = []
+ships_location = []
+
 
 
 def main(player_key):
     global map_size
     global targets
+    global state
+    global ships
+    global ships_location
     # Retrieve current game state
     with open(os.path.join(output_path, game_state_file), 'r') as f_in:
         state = json.load(f_in)
@@ -22,6 +29,14 @@ def main(player_key):
     if state['Phase'] == 1:
         place_ships()
     else:
+        # Get all available ships
+        ships = []
+        ships_location = []
+        for ship in state['PlayerMap']['Owner']['Ships']:
+            if not ship['Destroyed']:
+                ships.append(ship['ShipType'])
+                location = (ship['Cells'][0]['X'], ship['Cells'][0]['Y']) 
+                ships_location.append(location)
         # Get all available cells to shoot
         targets = []
         for cell in state['OpponentMap']['Cells']:
@@ -31,8 +46,7 @@ def main(player_key):
         fire_shot(state['OpponentMap'])
 
 
-def output_shot(x, y):
-    move = 1# 1=fire shot command code
+def output_shot(x, y, move=1):
     with open(os.path.join(output_path, command_file), 'w') as f_out:
         f_out.write('{},{},{}'.format(move, x, y))
         f_out.write('\n')
@@ -45,7 +59,7 @@ def fire_shot(opponent_map):
     #  code 1 is your choice)
     target = cross_alg(opponent_map)
     while not(is_available_cell(target)):
-        target = cross_alg(opponent_map)
+        target = play(opponent_map)
     output_shot(*target)
     return
 
@@ -55,6 +69,31 @@ def random():
 
 def is_valid_cell(x, y):
     return x < map_size and y < map_size
+    
+def play(opponent_map):
+    if state['PlayerMap']['Owner']['Shield']['CurrentCharges'] != 0:
+        target = choice(ships_location)
+        return (*target, 8)
+    else:
+        target = cross_alg(opponent_map)
+        multiplier = 0
+        if map_size == 7:
+            multiplier = 2
+        elif map_size == 10:
+            multiplier = 3
+        else:
+            multiplier = 4
+            
+        move = best_shot_available(state['PlayerMap']['Owner']['Energy'], multiplier)
+        return (*target, move)
+        
+def best_shot_available(energy, multiplier):
+    if "Carrier" in ships and (energy >= (10 * multiplier)):
+        return 4
+    elif "Submarine" in ships and (energy >= (10 * multiplier)):
+        return 7
+    else:
+        return 1
 
 def cross_alg(opponent_map):
     n = 2
