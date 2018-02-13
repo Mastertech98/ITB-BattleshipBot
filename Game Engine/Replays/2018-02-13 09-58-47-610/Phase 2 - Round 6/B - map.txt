@@ -1,0 +1,48 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Game Version : 1.0.0
+Game Level : 1
+Round Number : 6
+Map Dimensions : 10 x 10
+Phase : 2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########## Player
+~~~~~~~~~~
+~SSS~~~~~~
+~~~~~~~D~~
+~~~~R~~D~~
+~~~~R~~~~~
+~B~~R~~~~~
+~B~~~~~~~~
+~B~~~~~~~~
+~B~~CCCCC~
+~~~~~~~~~~
+########## Opponent
+~~~~~~~~~~
+~***!~~~~~
+~~~~~~~~~~
+!~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+##########
+
+---------------------------
+Player Name: BotJuara
+Available Energy: 13
+Shots: 5
+Hit: 3
+Points: 60
+Arsenal: [SingleShot,SeekerMissile,DoubleShot,DiagonalCrossShot,CornerShot,CrossShot]
+Ships: [Submarine,Destroyer,Battle Ship,Carrier,Cruiser]
+Status: Alive
+Shield: (Status: Deactivated, Charges: 0), Center Point: No Shield
+---------------------------
+Opponent: niraka
+Points: 0
+Ships: [Destroyer,Battle Ship,Carrier,Cruiser]
+Status: Alive
+---------------------------

@@ -1,0 +1,48 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Game Version : 1.0.0
+Game Level : 1
+Round Number : 39
+Map Dimensions : 10 x 10
+Phase : 2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########## Player
+~~~~~~~~~~
+~SsS~~~~~~
+~~~~~~~D~~
+~~~~r~~D~~
+~~~~r~~~~~
+~b~~r~~~~~
+~b~~~~~~~~
+~b~~~~~~~~
+~b~~ccccc~
+~~~~~~~~~~
+########## Opponent
+~~~~~~~!!~
+!***!~~!*!
+~~!~~!!~*!
+~~!~~!!~*!
+~~~~!**!*!
+~~~~!~~~*~
+~~~~!~~!!!
+~~~~~~!~~*
+~~~~~!!!~*
+~~~~~~~~~*
+##########
+
+---------------------------
+Player Name: BotJuara
+Available Energy: 17
+Shots: 36
+Hit: 13
+Points: 250
+Arsenal: [SingleShot,SeekerMissile,DoubleShot]
+Ships: [Submarine,Destroyer]
+Status: Alive
+Shield: (Status: Deactivated, Charges: 5), Center Point: No Shield
+---------------------------
+Opponent: IQ3digit
+Points: 220
+Ships: [Battle Ship]
+Status: Alive
+---------------------------

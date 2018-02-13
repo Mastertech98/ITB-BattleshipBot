@@ -1,0 +1,8 @@
+
+13-02-2018 09:59:08:306 - I: 	Player Command GameEngine.Commands.PlayerCommands.PlaceShieldCommand failed because A shiled is already active and cant be placed
+13-02-2018 09:59:08:665 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-58-47-610\Phase 2 - Round 49\B"
+13-02-2018 09:59:08:665 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-58-47-610\Phase 2 - Round 49\B"
+13-02-2018 09:59:08:665 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 09:59:08:743 - E: 	Output from bot: 
+13-02-2018 09:59:08:743 - I: 	Output from bot: 
+13-02-2018 09:59:08:743 - I: 	Your bots total execution time was 00:00:00.0815383

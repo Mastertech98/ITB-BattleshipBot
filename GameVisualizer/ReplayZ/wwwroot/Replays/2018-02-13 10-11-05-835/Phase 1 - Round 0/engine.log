@@ -1,0 +1,12 @@
+
+13-02-2018 10:11:05:992 - I: 	Loaded bot ..\Reference Bots\Nirzz
+13-02-2018 10:11:06:039 - I: 	Loaded bot ..\Reference Bots\BotJuara
+13-02-2018 10:11:06:039 - I: 	Registered player niraka
+13-02-2018 10:11:06:039 - I: 	Registered player BotJuara
+13-02-2018 10:11:06:070 - I: 		OK!
+13-02-2018 10:11:06:833 - I: 	Added Command PlaceShipCommand for Player niraka
+13-02-2018 10:11:07:009 - I: 	Added Command PlaceShipCommand for Player BotJuara
+13-02-2018 10:11:07:009 - D: 	Beginning round processing
+13-02-2018 10:11:07:025 - D: 	Processing Player Commands
+13-02-2018 10:11:07:040 - D: 	Killing off players who have no ships left
+13-02-2018 10:11:07:040 - D: 	Round processing complete

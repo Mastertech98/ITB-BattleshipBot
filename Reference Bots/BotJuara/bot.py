@@ -57,7 +57,7 @@ def fire_shot(opponent_map):
     # To send through a command please pass through the following <code>,<x>,<y>
     # Possible codes: 1 - Fireshot, 0 - Do Nothing (please pass through coordinates if
     #  code 1 is your choice)
-    target = cross_alg(opponent_map)
+    target = play(opponent_map)
     while not(is_available_cell(target)):
         target = play(opponent_map)
     output_shot(*target)
@@ -71,7 +71,7 @@ def is_valid_cell(x, y):
     return x < map_size and y < map_size
     
 def play(opponent_map):
-    if state['PlayerMap']['Owner']['Shield']['CurrentCharges'] != 0:
+    if state['PlayerMap']['Owner']['Shield']['CurrentCharges'] >= 7:
         target = choice(ships_location)
         return (*target, 8)
     else:
@@ -88,12 +88,22 @@ def play(opponent_map):
         return (*target, move)
         
 def best_shot_available(energy, multiplier):
-    if "Carrier" in ships and (energy >= (10 * multiplier)):
-        return 4
-    elif "Submarine" in ships and (energy >= (10 * multiplier)):
-        return 7
-    else:
-        return 1
+    if "Battleship" in ships: 
+        if (energy >= (12 * multiplier)):
+            return 5
+    elif "Carrier" in ships:
+        if (energy >= (10 * multiplier)):
+            return 4
+    elif "Submarine" in ships:
+        if (energy >= (10 * multiplier)):
+            return 7
+    elif "Cruiser" in ships:
+        if (energy >= (14 * multiplier)):
+            return 6
+    elif "Destroyer" in ships:
+        if (energy >= (8 * multiplier)):
+            return 2
+    return 1
 
 def cross_alg(opponent_map):
     n = 2
@@ -245,6 +255,8 @@ def is_missed_cell_valid(missed_cell, n, direction = None):
             return (missed_cell[0] - n, missed_cell[1] - n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'sw')
         elif direction == 'nw':
             return (missed_cell[0] - n, missed_cell[1] + n) in targets and is_missed_cell_valid(missed_cell, n - 1, 'nw')
+        else:
+            return False
 
 def get_damaged_and_missed_cell(opponent_map):
     # Get damaged cell which has the surrounding
@@ -267,12 +279,29 @@ def place_ships():
     # Ship names: Battleship, Cruiser, Carrier, Destroyer, Submarine
     # Directions: north east south west
 
-    ships = ['Battleship 1 0 north',
-             'Carrier 3 1 East',
-             'Cruiser 4 2 north',
-             'Destroyer 7 3 north',
-             'Submarine 1 8 East'
-             ]
+
+    if (map_size == 7):
+        ships = ['Battleship 1 1 north',
+                 'Carrier 4 1 East',
+                 'Cruiser 4 4 north',
+                 'Destroyer 7 6 north',
+                 'Submarine 1 8 East'
+                ]
+    if (map_size == 10):
+        ships = ['Battleship 1 1 north',
+                 'Carrier 4 1 East',
+                 'Cruiser 4 4 north',
+                 'Destroyer 7 6 north',
+                 'Submarine 1 8 East'
+                ]
+    else:
+        ships = ['Battleship 1 1 north',
+                 'Carrier 4 1 East',
+                 'Cruiser 4 4 north',
+                 'Destroyer 7 6 north',
+                 'Submarine 1 8 East'
+                ]
+
 
     with open(os.path.join(output_path, place_ship_file), 'w') as f_out:
         for ship in ships:

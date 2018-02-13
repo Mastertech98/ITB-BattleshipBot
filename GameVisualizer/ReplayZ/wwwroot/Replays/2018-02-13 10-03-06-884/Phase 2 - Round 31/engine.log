@@ -1,0 +1,14 @@
+
+13-02-2018 10:03:24:444 - I: 	Added Command FireSingleShotCommand for Player niraka
+13-02-2018 10:03:24:538 - I: 	Added Command FireSeekerMissileCommand for Player BotJuara
+13-02-2018 10:03:24:538 - D: 	Beginning round processing
+13-02-2018 10:03:24:538 - D: 	Processing Player Commands
+13-02-2018 10:03:24:538 - E: 	Failed to process command FireSeekerMissileCommand for player BotJuaraGameEngine.Exceptions.InvalidCommandException: The player does not have sufficient energy to use the selected weapon ---> Domain.Exceptions.InsufficientEnergyException: The player does not have sufficient energy to use the selected weapon
+   at Domain.Games.GameMap.Shoot(PlayerType player, List`1 targets, WeaponType weaponType) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\Domain\Games\GameMap.cs:line 97
+   at GameEngine.Commands.PlayerCommands.FireSeekerMissileCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\FireSeekerMissileCommand.cs:line 62
+   --- End of inner exception stack trace ---
+   at GameEngine.Commands.PlayerCommands.FireSeekerMissileCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\FireSeekerMissileCommand.cs:line 72
+   at GameEngine.Engine.GameRoundProcessor.ProcessPlayerCommands() in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Engine\GameRoundProcessor.cs:line 213
+
+13-02-2018 10:03:24:538 - D: 	Killing off players who have no ships left
+13-02-2018 10:03:24:538 - D: 	Round processing complete

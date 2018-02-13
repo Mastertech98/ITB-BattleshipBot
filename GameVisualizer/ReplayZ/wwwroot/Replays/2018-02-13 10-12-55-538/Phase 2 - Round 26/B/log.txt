@@ -1,0 +1,8 @@
+
+13-02-2018 10:13:10:616 - I: 	Player Command FireCrossShotCommand failed because BotJuara's Battleship has been destroyed and cannot use this shot
+13-02-2018 10:13:11:038 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-12-55-538\Phase 2 - Round 26\B"
+13-02-2018 10:13:11:038 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-12-55-538\Phase 2 - Round 26\B"
+13-02-2018 10:13:11:038 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 10:13:11:132 - E: 	Output from bot: 
+13-02-2018 10:13:11:132 - I: 	Output from bot: 
+13-02-2018 10:13:11:132 - I: 	Your bots total execution time was 00:00:00.0988078

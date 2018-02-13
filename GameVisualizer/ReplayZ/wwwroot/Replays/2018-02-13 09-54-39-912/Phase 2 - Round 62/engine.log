@@ -1,0 +1,8 @@
+
+13-02-2018 09:55:06:134 - I: 	Added Command FireSingleShotCommand for Player niraka
+13-02-2018 09:55:06:227 - I: 	Added Command FireSeekerMissileCommand for Player BotJuara
+13-02-2018 09:55:06:227 - D: 	Beginning round processing
+13-02-2018 09:55:06:227 - D: 	Processing Player Commands
+13-02-2018 09:55:06:227 - D: 	Killing off players who have no ships left
+13-02-2018 09:55:06:227 - D: 	Killed player niraka
+13-02-2018 09:55:06:227 - D: 	Round processing complete

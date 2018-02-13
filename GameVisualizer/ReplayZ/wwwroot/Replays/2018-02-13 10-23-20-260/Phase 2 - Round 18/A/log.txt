@@ -1,0 +1,7 @@
+
+13-02-2018 10:23:31:000 - D: 	Executing bot with following commands python.exe "cerebrovit x-cel.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-23-20-260\Phase 2 - Round 18\A"
+13-02-2018 10:23:31:000 - I: 	Executing process python.exe "cerebrovit x-cel.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-23-20-260\Phase 2 - Round 18\A"
+13-02-2018 10:23:31:000 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 10:23:31:078 - I: 	Output from bot: 
+13-02-2018 10:23:31:078 - E: 	Output from bot: 
+13-02-2018 10:23:31:078 - I: 	Your bots total execution time was 00:00:00.0865448

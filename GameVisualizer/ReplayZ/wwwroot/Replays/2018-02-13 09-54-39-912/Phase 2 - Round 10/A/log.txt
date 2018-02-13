@@ -1,0 +1,19 @@
+
+13-02-2018 09:54:44:974 - D: 	Executing bot with following commands python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-54-39-912\Phase 2 - Round 10\A"
+13-02-2018 09:54:44:974 - I: 	Executing process python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-54-39-912\Phase 2 - Round 10\A"
+13-02-2018 09:54:44:974 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 09:54:45:052 - I: 	Output from bot: ['Submarine', 'Destroyer', 'Battleship', 'Carrier', 'Cruiser']
+13-02-2018 09:54:45:052 - I: 	Output from bot: damaged
+13-02-2018 09:54:45:052 - I: 	Output from bot: 4 , 4
+13-02-2018 09:54:45:052 - I: 	Output from bot: damaged
+13-02-2018 09:54:45:052 - I: 	Output from bot: 4 , 5
+13-02-2018 09:54:45:052 - I: 	Output from bot: damaged
+13-02-2018 09:54:45:052 - I: 	Output from bot: 4 , 6
+13-02-2018 09:54:45:052 - I: 	Output from bot: [(4, 6), (4, 3), (4, 7), (4, 4)]
+13-02-2018 09:54:45:052 - I: 	Output from bot: 4
+13-02-2018 09:54:45:052 - I: 	Output from bot: pair
+13-02-2018 09:54:45:052 - I: 	Output from bot: random
+13-02-2018 09:54:45:052 - I: 	Output from bot: priority 1
+13-02-2018 09:54:45:052 - I: 	Output from bot: 
+13-02-2018 09:54:45:052 - E: 	Output from bot: 
+13-02-2018 09:54:45:052 - I: 	Your bots total execution time was 00:00:00.0904405

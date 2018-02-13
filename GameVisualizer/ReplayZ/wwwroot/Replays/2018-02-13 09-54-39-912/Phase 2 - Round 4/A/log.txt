@@ -1,0 +1,13 @@
+
+13-02-2018 09:54:42:519 - D: 	Executing bot with following commands python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-54-39-912\Phase 2 - Round 4\A"
+13-02-2018 09:54:42:519 - I: 	Executing process python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 09-54-39-912\Phase 2 - Round 4\A"
+13-02-2018 09:54:42:535 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 09:54:42:597 - I: 	Output from bot: ['Submarine', 'Destroyer', 'Battleship', 'Carrier', 'Cruiser']
+13-02-2018 09:54:42:597 - I: 	Output from bot: []
+13-02-2018 09:54:42:597 - I: 	Output from bot: 0
+13-02-2018 09:54:42:597 - I: 	Output from bot: pair
+13-02-2018 09:54:42:597 - I: 	Output from bot: random
+13-02-2018 09:54:42:597 - I: 	Output from bot: priority 1
+13-02-2018 09:54:42:613 - E: 	Output from bot: 
+13-02-2018 09:54:42:613 - I: 	Output from bot: 
+13-02-2018 09:54:42:613 - I: 	Your bots total execution time was 00:00:00.0861090

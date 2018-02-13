@@ -1,0 +1,41 @@
+
+13-02-2018 10:05:22:128 - D: 	Executing bot with following commands python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-05-01-526\Phase 2 - Round 37\A"
+13-02-2018 10:05:22:128 - I: 	Executing process python.exe "bot.py" A "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-05-01-526\Phase 2 - Round 37\A"
+13-02-2018 10:05:22:144 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 10:05:22:222 - I: 	Output from bot: ['Battleship', 'Carrier', 'Cruiser']
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 1 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 1 , 2
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 1 , 3
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 1 , 4
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 4 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 4 , 4
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 4 , 5
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 4 , 6
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 5 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 6 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 7 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 7 , 6
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 7 , 7
+13-02-2018 10:05:22:222 - I: 	Output from bot: damaged
+13-02-2018 10:05:22:222 - I: 	Output from bot: 8 , 1
+13-02-2018 10:05:22:222 - I: 	Output from bot: [(1, 3), (1, 0), (1, 4), (1, 1), (1, 5), (1, 2), (3, 1), (6, 1), (4, 6), (4, 3), (4, 7), (4, 4), (4, 1), (7, 1), (5, 1), (8, 1), (6, 1), (9, 1), (7, 8), (7, 5)]
+13-02-2018 10:05:22:222 - I: 	Output from bot: 20
+13-02-2018 10:05:22:222 - I: 	Output from bot: pair
+13-02-2018 10:05:22:222 - I: 	Output from bot: random
+13-02-2018 10:05:22:222 - I: 	Output from bot: priority 2
+13-02-2018 10:05:22:222 - E: 	Output from bot: 
+13-02-2018 10:05:22:222 - I: 	Output from bot: 
+13-02-2018 10:05:22:222 - I: 	Your bots total execution time was 00:00:00.0963606

@@ -1,0 +1,7 @@
+
+13-02-2018 09:50:57:550 - I: 	Added Command FireSingleShotCommand for Player niraka
+13-02-2018 09:51:01:579 - I: 	Added Command DoNothingCommand for Player BotJuara
+13-02-2018 09:51:01:579 - D: 	Beginning round processing
+13-02-2018 09:51:01:579 - D: 	Processing Player Commands
+13-02-2018 09:51:01:579 - D: 	Killing off players who have no ships left
+13-02-2018 09:51:01:579 - D: 	Round processing complete

@@ -1,0 +1,48 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Game Version : 1.0.0
+Game Level : 1
+Round Number : 25
+Map Dimensions : 10 x 10
+Phase : 2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########## Player
+~~~~~~~~~~
+~sss~~~~c~
+~~~~~~~~c~
+~~~~~~~~c~
+~~~~~dd~c~
+~~~~~~~~c~
+B~~~~~~~~~
+B~~~~~~~~R
+B~~~~~~~~R
+B~~~~~~~~R
+########## Opponent
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~~~~~~~~~~
+~!~~~~~~~~
+~*~!~~~~~~
+~*!!!!~!~!
+~*~!~~~~~~
+!*!!*****!
+!!!~!~!~!~
+##########
+
+---------------------------
+Player Name: IQ3digit
+Available Energy: 10
+Shots: 24
+Hit: 9
+Points: 150
+Arsenal: [SingleShot,DiagonalCrossShot,CrossShot]
+Ships: [Battle Ship,Cruiser]
+Status: Alive
+Shield: (Status: Deactivated, Charges: 3), Center Point: No Shield
+---------------------------
+Opponent: BotJuara
+Points: 190
+Ships: [Submarine,Destroyer,Cruiser]
+Status: Alive
+---------------------------

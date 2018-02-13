@@ -1,0 +1,14 @@
+
+13-02-2018 09:33:38:289 - I: 	Added Command FireSingleShotCommand for Player py3Bot
+13-02-2018 09:33:38:367 - I: 	Added Command GameEngine.Commands.PlayerCommands.PlaceShieldCommand for Player BotJuara
+13-02-2018 09:33:38:367 - D: 	Beginning round processing
+13-02-2018 09:33:38:367 - D: 	Processing Player Commands
+13-02-2018 09:33:38:383 - E: 	Failed to process command GameEngine.Commands.PlayerCommands.PlaceShieldCommand for player BotJuaraGameEngine.Exceptions.InvalidCommandException: The shield has no charge and cannot be applied ---> System.Exception: The shield has no charge and cannot be applied
+   at Domain.Games.GameMap.PlaceShield(BattleshipPlayer player, Point centerPoint, Int32 currentRound) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\Domain\Games\GameMap.cs:line 196
+   at GameEngine.Commands.PlayerCommands.PlaceShieldCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\PlaceShieldCommand.cs:line 21
+   --- End of inner exception stack trace ---
+   at GameEngine.Commands.PlayerCommands.PlaceShieldCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\PlaceShieldCommand.cs:line 25
+   at GameEngine.Engine.GameRoundProcessor.ProcessPlayerCommands() in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Engine\GameRoundProcessor.cs:line 213
+
+13-02-2018 09:33:38:383 - D: 	Killing off players who have no ships left
+13-02-2018 09:33:38:383 - D: 	Round processing complete

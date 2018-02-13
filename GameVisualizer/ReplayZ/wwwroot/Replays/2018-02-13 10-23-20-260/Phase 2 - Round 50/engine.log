@@ -1,0 +1,7 @@
+
+13-02-2018 10:23:57:036 - I: 	Added Command GameEngine.Commands.PlayerCommands.PlaceShieldCommand for Player IQ3digit
+13-02-2018 10:23:57:145 - I: 	Added Command GameEngine.Commands.PlayerCommands.PlaceShieldCommand for Player BotJuara
+13-02-2018 10:23:57:145 - D: 	Beginning round processing
+13-02-2018 10:23:57:145 - D: 	Processing Player Commands
+13-02-2018 10:23:57:161 - D: 	Killing off players who have no ships left
+13-02-2018 10:23:57:161 - D: 	Round processing complete

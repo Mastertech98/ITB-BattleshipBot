@@ -1,0 +1,8 @@
+
+13-02-2018 10:03:23:882 - I: 	Player Command FireSeekerMissileCommand failed because The player does not have sufficient energy to use the selected weapon
+13-02-2018 10:03:24:444 - D: 	Executing bot with following commands python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-03-06-884\Phase 2 - Round 31\B"
+13-02-2018 10:03:24:444 - I: 	Executing process python.exe "bot.py" B "C:\Users\Rama R\Desktop\ITB-BattleshipBot\Game Engine\Replays\2018-02-13 10-03-06-884\Phase 2 - Round 31\B"
+13-02-2018 10:03:24:460 - I: 	Bot has 4000ms to run before it will be forcefully killed
+13-02-2018 10:03:24:523 - E: 	Output from bot: 
+13-02-2018 10:03:24:523 - I: 	Output from bot: 
+13-02-2018 10:03:24:523 - I: 	Your bots total execution time was 00:00:00.0790129

@@ -1,0 +1,7 @@
+
+13-02-2018 10:24:00:226 - I: 	Added Command FireCrossShotCommand for Player IQ3digit
+13-02-2018 10:24:00:429 - I: 	Added Command FireSingleShotCommand for Player BotJuara
+13-02-2018 10:24:00:429 - D: 	Beginning round processing
+13-02-2018 10:24:00:429 - D: 	Processing Player Commands
+13-02-2018 10:24:00:429 - D: 	Killing off players who have no ships left
+13-02-2018 10:24:00:429 - D: 	Round processing complete

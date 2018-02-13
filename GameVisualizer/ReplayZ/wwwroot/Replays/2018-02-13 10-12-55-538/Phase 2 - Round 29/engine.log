@@ -1,0 +1,13 @@
+
+13-02-2018 10:13:12:866 - I: 	Added Command FireSingleShotCommand for Player py3Bot
+13-02-2018 10:13:12:975 - I: 	Added Command FireCrossShotCommand for Player BotJuara
+13-02-2018 10:13:12:975 - D: 	Beginning round processing
+13-02-2018 10:13:12:975 - D: 	Processing Player Commands
+13-02-2018 10:13:12:975 - E: 	Failed to process command FireCrossShotCommand for player BotJuaraGameEngine.Exceptions.InvalidCommandException: BotJuara's Battleship has been destroyed and cannot use this shot ---> GameEngine.Exceptions.DestroyedShipException: BotJuara's Battleship has been destroyed and cannot use this shot
+   at GameEngine.Commands.PlayerCommands.FireCrossShotCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\FireCrossShotCommand.cs:line 47
+   --- End of inner exception stack trace ---
+   at GameEngine.Commands.PlayerCommands.FireCrossShotCommand.PerformCommand(GameMap gameMap, BattleshipPlayer player) in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Commands\PlayerCommands\FireCrossShotCommand.cs:line 74
+   at GameEngine.Engine.GameRoundProcessor.ProcessPlayerCommands() in C:\Development\Entelect Challenge\2017-Battleships\GameEngine\Battleships\GameEngine\Engine\GameRoundProcessor.cs:line 213
+
+13-02-2018 10:13:12:975 - D: 	Killing off players who have no ships left
+13-02-2018 10:13:12:975 - D: 	Round processing complete

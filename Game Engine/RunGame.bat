@@ -1,1 +1,1 @@
-Battleships.exe -b "..\Reference Bots\Fazz" "..\Reference Bots\BotJuara" --clog --pretty --debug
+Battleships.exe -b "..\Reference Bots\Bot1" "..\Reference Bots\BotJuara" --clog --pretty --debug
