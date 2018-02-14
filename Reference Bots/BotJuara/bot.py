@@ -291,15 +291,15 @@ def place_ships():
         ships = ['Battleship 1 1 north',
                  'Carrier 4 1 East',
                  'Cruiser 4 4 north',
-                 'Destroyer 7 6 north',
-                 'Submarine 1 8 East'
+                 'Destroyer 8 7 north',
+                 'Submarine 2 9 East'
                 ]
     else:
-        ships = ['Battleship 1 1 north',
-                 'Carrier 4 1 East',
-                 'Cruiser 4 4 north',
-                 'Destroyer 7 6 north',
-                 'Submarine 1 8 East'
+        ships = ['Battleship 0 0 north',
+                 'Carrier 5 2 East',
+                 'Cruiser 5 5 north',
+                 'Destroyer 10 9 north',
+                 'Submarine 4 11 East'
                 ]
 
 
